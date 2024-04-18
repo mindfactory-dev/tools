@@ -1,0 +1,30 @@
+{
+    "name": "mindfactory/tools",
+    "description": "Some helpful php methods we like to use",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "php",
+        "tools"
+    ],
+    "authors": [
+        {
+            "name": "Henrik Persson",
+            "email": "henrik.persson@mindfactory.se"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^10.0.0 || ^11.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mindfactory\\Tools\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mindfactory\\Tools\\Test\\": "tests/"
+        }
+    }
+}
