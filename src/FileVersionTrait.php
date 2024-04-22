@@ -4,16 +4,13 @@
 
 namespace Mindfactory\Tools;
 
-use Mindfactory\Tools\FileNotFoundException;
-
-
 trait FileVersionTrait
 {
     public function getFileVersion(string $path, string|array $versions = ''): string
     {
         // Check so base file exists
         if (!file_exists($path)) {
-            throw new FileNotFoundException;
+            throw new \RuntimeException();
         }
 
         $pathParts = pathinfo($path);

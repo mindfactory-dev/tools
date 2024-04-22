@@ -6,7 +6,6 @@ namespace Mindfactory\Tools\Test\TestCase;
 
 use PHPUnit\Framework\TestCase;
 use Mindfactory\Tools\FileVersionTrait;
-use Mindfactory\Tools\FileNotFoundException;
 
 class FileVersionTraitTest extends TestCase
 {
@@ -42,7 +41,7 @@ class FileVersionTraitTest extends TestCase
 
         try {
             $this->trait->getFileVersion($path);
-        } catch (FileNotFoundException $e) {
+        } catch (\RuntimeException $e) {
             $this->assertTrue(true);
             return;
         }
